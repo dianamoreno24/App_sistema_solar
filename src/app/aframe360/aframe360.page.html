@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>aframe360</ion-title>
   </ion-toolbar>
@@ -14,8 +14,7 @@
       <video id="Fono" crossorigin="anonymous" src="../assets/video360/Sistema_solar_360.mp4" ></video>
 
     </a-assets>
-    <!-- 360-degree image. -->
-
+ 
 
     <a-sky id="image-360" radius="10" src=""
            animation__fade="property: components.material.material.color; type: color; from: #FFF; to: #000; dur: 300; startEvents: fade"
@@ -30,3 +29,21 @@
     Home
   </ion-button>
 </ion-content>
+ -->
+ <a-scene cursor="rayOrigin: mouse" rotation="0 0 0">
+  <a-assets>
+    <!-- <video id="Fono" crossorigin="anonymous" src="../assets/video360/Sistema_solar_360.mp4" ></video> -->
+  <img id="img" src="../../assets/images/MuestraComercial_Ensure_360_Imagen_v4.jpg" alt="">
+  </a-assets>
+  <!-- 360-degree image. -->
+
+
+  <a-sky id="image-360" radius="10" src="#img"
+         animation__fade="property: components.material.material.color; type: color; from: #FFF; to: #000; dur: 300; startEvents: fade"
+         animation_fadeback="property: components.material.material.color; type: color; from: #000; to: #FFF; dur: 300; startEvents: animationcomplete_fade">
+  </a-sky>
+
+
+
+  <a-entity camera look-controls mouse-cursor></a-entity>
+</a-scene>
