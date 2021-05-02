@@ -52,9 +52,12 @@
  *
  */
 
+ import 'aframe';
+
+
 import './zone-flags';
 
-import 'aframe';
+
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
  */
