@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Sistema Solar</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-sm="2" *ngFor= "let proyecto of proyectos">
+
+        <ion-card>
+          <ion-card-header>
+            <img src='{{proyecto.src}}' alt="">
+            <ion-icon color="blue" size="small" name="documents-outline"></ion-icon>
+            <ion-card-title>{{proyecto.title}}</ion-card-title>
+            <ion-card-subtitle>{{proyecto.tipo}}</ion-card-subtitle>
+
+
+          </ion-card-header>
+
+          <ion-card-content>
+            {{proyecto.content}}
+            <ion-button routerLink="/detalle">
+              Ver detalle
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-buttons slot="start">
+    <ion-back-button text="back">
+    </ion-back-button>
+  </ion-buttons>
+  <ion-button routerLink="/home">
+    Home
+  </ion-button>
+  <ion-button routerLink="/aframe360">
+    ver 360 del sistema
+  </ion-button>
+
+</ion-content>
