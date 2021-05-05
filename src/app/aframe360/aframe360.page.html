@@ -1,49 +1,11 @@
-<!-- <ion-header>
-  <ion-toolbar>
-    <ion-title>aframe360</ion-title>
-  </ion-toolbar>
-</ion-header>
+<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
 
-<ion-content>
-  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-  <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
-  <script src="https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.min.js"></script>
-  <script src="https://unpkg.com/aframe-gradient-sky@1.2.0/dist/gradientsky.min.js"></script>
-  <a-scene cursor="rayOrigin: mouse" rotation="0 0 0">
-    <a-assets>
-      <video id="Fono" crossorigin="anonymous" src="../assets/video360/Sistema_solar_360.mp4" ></video>
-
-    </a-assets>
- 
-
-    <a-sky id="image-360" radius="10" src=""
-           animation__fade="property: components.material.material.color; type: color; from: #FFF; to: #000; dur: 300; startEvents: fade"
-           animation_fadeback="property: components.material.material.color; type: color; from: #000; to: #FFF; dur: 300; startEvents: animationcomplete_fade">
-    </a-sky>
-
-
-
-    <a-entity camera look-controls mouse-cursor></a-entity>
+  <a-scene>
+    <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+    <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+    <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+    <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+    <a-sky color="#ECECEC"></a-sky>
   </a-scene>
-  <ion-button routerLink="/home">
-    Home
-  </ion-button>
-</ion-content>
- -->
- <a-scene cursor="rayOrigin: mouse" rotation="0 0 0">
-  <a-assets>
-    <!-- <video id="Fono" crossorigin="anonymous" src="../assets/video360/Sistema_solar_360.mp4" ></video> -->
-  <img id="img" src="../../assets/images/MuestraComercial_Ensure_360_Imagen_v4.jpg" alt="">
-  </a-assets>
-  <!-- 360-degree image. -->
 
 
-  <a-sky id="image-360" radius="10" src="#img"
-         animation__fade="property: components.material.material.color; type: color; from: #FFF; to: #000; dur: 300; startEvents: fade"
-         animation_fadeback="property: components.material.material.color; type: color; from: #000; to: #FFF; dur: 300; startEvents: animationcomplete_fade">
-  </a-sky>
-
-
-
-  <a-entity camera look-controls mouse-cursor></a-entity>
-</a-scene>
